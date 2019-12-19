@@ -10,7 +10,7 @@ public class BeanDefinition {
 
     private Map<String,Attribute> attributesMap;
 
-
+    private List<String> annotations;
 
     public BeanDefinition(){
         attributes = new ArrayList<Attribute>();
@@ -24,4 +24,11 @@ public class BeanDefinition {
     }
 
 
+    public List<String> getAnnotations() {
+        return annotations;
+    }
+
+    public void setAnnotations(List<String> annotations) {
+        this.annotations = annotations;
+    }
 }

@@ -8,7 +8,7 @@ import com.wjw.model.BeanDefinition;
  * @Date 2019-12-19
  */
 public class DaoGenerator  extends AbstractGenerator {
-    public byte[] generator(BeanDefinition beanDefinition) {
-        return new byte[0];
+    public String generator(BeanDefinition beanDefinition) {
+        return null;
     }
 }

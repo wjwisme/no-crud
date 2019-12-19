@@ -1,5 +1,8 @@
 package com.wjw.generator;
 
+import com.wjw.code.AbstractSourceCode;
+import com.wjw.code.ImportSourceCode;
+import com.wjw.main.GeneratorType;
 import com.wjw.model.BeanDefinition;
 
 
@@ -8,7 +11,9 @@ import com.wjw.model.BeanDefinition;
  * @Date 2019-12-19
  */
 public class ControllerGenerator  extends AbstractGenerator {
-    public byte[] generator(BeanDefinition beanDefinition) {
-        return new byte[0];
+    public String generator(BeanDefinition beanDefinition) {
+        AbstractSourceCode sourceCode = new ImportSourceCode();
+        String controllerSourceCode = sourceCode.getSourceCode(beanDefinition, GeneratorType.Controller);
+        return controllerSourceCode;
     }
 }
